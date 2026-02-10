@@ -1,0 +1,872 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="color-scheme" content="light only">
+    <link rel="stylesheet" href="css/fancybox.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/nice-select.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <title>Главная</title>
+</head>
+
+
+
+<style>
+    .wrapper a {
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+
+    .wrapper button {
+        margin-bottom: 25px;
+        width: 300px;
+        height: 45px;
+    }
+</style>
+
+<body class="m-page">
+
+    <div class="wrapper" style="padding: 50px;">
+        <a href="index.html" style="display: block; margin-bottom: 20px;">
+            Главная
+        </a>
+        <a href="catalog.html" style="display: block; margin-bottom: 20px;">
+            Каталог
+        </a>
+        <a href="catalog-item.html" style="display: block; margin-bottom: 20px;">
+            Карточка товара
+        </a>
+        <a href="order.html" style="display: block; margin-bottom: 20px;">
+            Оформление заказа
+        </a>
+        <a href="order2.html" style="display: block; margin-bottom: 20px;">
+            Оформление заказа 2
+        </a>
+        <a href="order3.html" style="display: block; margin-bottom: 20px;">
+            Оформление заказа 3
+        </a>
+        <a href="order4.html" style="display: block; margin-bottom: 20px;">
+            Оформление заказа 4
+        </a>
+
+
+
+
+        <button data-modal="giftModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Идеальный подарок
+        </button>
+        <button data-modal="orderModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Оформление заказа
+        </button>
+        <button data-modal="orderModal2" style="border: 2px solid #000;margin-bottom: 20px;">
+            Оформление заказа 2
+        </button>
+        <button data-modal="orderModal3" style="border: 2px solid #000;margin-bottom: 20px;">
+            Оформление заказа 3
+        </button>
+        <button data-modal="orderModal4" style="border: 2px solid #000;margin-bottom: 20px;">
+            Оформление заказа 4
+        </button>
+
+    </div>
+
+
+
+
+
+
+
+
+    <!--  -->
+    <div class="modal review-modal" id="reviewModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <div class="review-modal__text text18 text16-tablet"></div>
+
+            <button class="close-btn _close-modal">
+                <img src="img/close.svg" alt="">
+            </button>
+        </div>
+    </div>
+
+    <div class="modal gift-modal" id="giftModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <div class="gift-modal__grid">
+                <div class="gift-modal__col">
+                    <div class="product-sale">
+                        <div class="sale__inner">
+                            <div class="sale__top">
+                                <div class="sale__title h1">
+                                    акция
+                                </div>
+                            </div>
+                            <div class="sale__subtitle">
+                                <div class="h4 h5-tablet">
+                                    При покупке от 2-ух наборов
+                                </div>
+                            </div>
+                            <div class="sale-gift">
+                                <div class="sale-gift__row">
+                                    <div class="h4 text17-tablet">
+                                        набор 8 саше любого аромата
+                                    </div>
+                                </div>
+                                <div class="sale-gift__row2">
+                                    <div class="sale-gift__title">
+                                        в подарок
+                                    </div>
+                                </div>
+                            </div>
+                            <img src="img/sale.webp" alt="" class="sale__img">
+                            <div class="sale__nav">
+                                <a href="" class="sale__link m-btn m-btn-brown">
+                                    <span>Выбрать ароматы</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="gift-modal__col2">
+                    <div class="h3 h4-mob">
+                        Идеальный подарок <br> себе и близким
+                    </div>
+                    <div class="gift-modal__fields">
+                        <div class="fg">
+                            <select>
+                                <option selected hidden disabled>
+                                    Выберите 1 аромат
+                                </option>
+                                <option>Лаванда</option>
+                                <option>Манго</option>
+                                <option>Мандарин</option>
+                                <option>Пион</option>
+                                <option>Табак-ваниль</option>
+                                <option>Хлопок</option>
+                            </select>
+                        </div>
+
+                        <div class="fg">
+                            <select>
+                                <option selected hidden disabled>
+                                    Выберите 2 аромат
+                                </option>
+                                <option>Лаванда</option>
+                                <option>Манго</option>
+                                <option>Мандарин</option>
+                                <option>Пион</option>
+                                <option>Табак-ваниль</option>
+                                <option>Хлопок</option>
+                            </select>
+                        </div>
+
+                        <div class="fg">
+                            <select disabled>
+                                <option selected hidden disabled>
+                                    Выберите подарок
+                                </option>
+                                <option>Лаванда</option>
+                                <option>Манго</option>
+                                <option>Мандарин</option>
+                                <option>Пион</option>
+                                <option>Табак-ваниль</option>
+                                <option>Хлопок</option>
+                            </select>
+                        </div>
+
+                    </div>
+                    <div class="gift-modal__nav">
+                        <button class="gift-modal__btn m-btn m-btn-pink">
+                            <span>В корзину</span>
+                        </button>
+                        <button class="gift-modal__btn m-btn m-btn-pink-outline">
+                            <span>Купить сейчас</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <button class="close-btn _close-modal">
+                <img src="img/close.svg" alt="">
+            </button>
+        </div>
+    </div>
+
+    <div class="modal order-modal" id="orderModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <div class="order-modal__inner">
+                <div class="order-step">
+                    <div class="h4">
+                        Ваш заказ
+                    </div>
+                    <div class="order-step__items">
+                        <div class="order-item">
+                            <div class="order-item__col">
+                                <div class="order-item__img">
+                                    <img src="img/product-img.webp" alt="">
+                                </div>
+                                <div class="order-item__text">
+                                    <div class="h5">
+                                        Манго
+                                    </div>
+                                </div>
+                                <div class="order-item__count">
+                                    <div class='cartcalc'>
+                                        <button class='ccalc-minus'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path d="M4.5 8H12.5" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <input type='text' value='1'>
+                                        <button class='ccalc-plus'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path d="M8.5 4V12" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.5 8H12.5" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="order-item__col2">
+                                <div class="order-item__price">
+                                    <div class="h5">
+                                        60 руб
+                                    </div>
+                                </div>
+                                <button class="order-item__remove">
+                                    <img src="img/close2.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="order-item">
+                            <div class="order-item__col">
+                                <div class="order-item__img">
+                                    <img src="img/product-img.webp" alt="">
+                                </div>
+                                <div class="order-item__text">
+                                    <div class="h5">
+                                        Манго
+                                    </div>
+                                </div>
+                                <div class="order-item__count">
+                                    <div class='cartcalc'>
+                                        <button class='ccalc-minus'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path d="M4.5 8H12.5" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <input type='text' value='1'>
+                                        <button class='ccalc-plus'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path d="M8.5 4V12" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.5 8H12.5" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="order-item__col2">
+                                <div class="order-item__price">
+                                    <div class="h5">
+                                        60 руб
+                                    </div>
+                                </div>
+                                <button class="order-item__remove">
+                                    <img src="img/close2.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="order-sum">
+                    <div class="order-sum__price h4 green-text">
+                        Итого: 120 руб
+                    </div>
+                    <div class="order-sum__nav">
+                        <button class="order-sum__btn m-btn m-btn-pink-outline">
+                            <span>Продолжить покупки</span>
+                        </button>
+                        <button class="order-sum__btn m-btn m-btn-pink">
+                            <span>Оформить заказ</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="close-btn _close-modal">
+                <img src="img/close.svg" alt="">
+            </button>
+        </div>
+    </div>
+
+    <div class="modal order-modal" id="orderModal2">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <div class="order-modal__inner">
+                <div class="order-step">
+                    <div class="h4">
+                        Ваш заказ
+                    </div>
+                    <div class="order-step__items">
+                        <div class="order-item">
+                            <div class="order-item__col">
+                                <div class="order-item__img">
+                                    <img src="img/product-img.webp" alt="">
+                                </div>
+                                <div class="order-item__text">
+                                    <div class="h5">
+                                        Манго
+                                    </div>
+                                </div>
+                                <div class="order-item__count">
+                                    <div class='cartcalc'>
+                                        <button class='ccalc-minus'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path d="M4.5 8H12.5" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <input type='text' value='1'>
+                                        <button class='ccalc-plus'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path d="M8.5 4V12" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.5 8H12.5" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="order-item__col2">
+                                <div class="order-item__price">
+                                    <div class="h5">
+                                        60 руб
+                                    </div>
+                                </div>
+                                <button class="order-item__remove">
+                                    <img src="img/close2.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="order-item">
+                            <div class="order-item__col">
+                                <div class="order-item__img">
+                                    <img src="img/product-img.webp" alt="">
+                                </div>
+                                <div class="order-item__text">
+                                    <div class="h5">
+                                        Манго
+                                    </div>
+                                </div>
+                                <div class="order-item__count">
+                                    <div class='cartcalc'>
+                                        <button class='ccalc-minus'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path d="M4.5 8H12.5" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <input type='text' value='1'>
+                                        <button class='ccalc-plus'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path d="M8.5 4V12" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.5 8H12.5" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="order-item__col2">
+                                <div class="order-item__price">
+                                    <div class="h5">
+                                        60 руб
+                                    </div>
+                                </div>
+                                <button class="order-item__remove">
+                                    <img src="img/close2.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="order-suggest">
+                        <div class="h5 pink-text">
+                            Вы добавили 2 набора. <br>Добавьте свой бесплатный подарок!
+                        </div>
+                        <div class="fg">
+                            <select>
+                                <option selected hidden disabled>
+                                    Выберите подарок
+                                </option>
+                                <option>Лаванда</option>
+                                <option>Манго</option>
+                                <option>Мандарин</option>
+                                <option>Пион</option>
+                                <option>Табак-ваниль</option>
+                                <option>Хлопок</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="order-sum">
+                    <div class="order-sum__price h4 green-text">
+                        Итого: 120 руб
+                    </div>
+                    <div class="order-sum__nav">
+                        <button class="order-sum__btn m-btn m-btn-pink-outline">
+                            <span>Продолжить покупки</span>
+                        </button>
+                        <button class="order-sum__btn m-btn m-btn-pink">
+                            <span>Оформить заказ</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="close-btn _close-modal">
+                <img src="img/close.svg" alt="">
+            </button>
+        </div>
+    </div>
+
+    <div class="modal order-modal" id="orderModal3">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <div class="order-modal__inner">
+                <div class="order-step">
+                    <div class="h4">
+                        Ваш заказ
+                    </div>
+                    <div class="order-step__items">
+                        <div class="order-item">
+                            <div class="order-item__col">
+                                <div class="order-item__img">
+                                    <img src="img/product-img.webp" alt="">
+                                </div>
+                                <div class="order-item__text">
+                                    <div class="h5">
+                                        Манго
+                                    </div>
+                                </div>
+                                <div class="order-item__count">
+                                    <div class='cartcalc'>
+                                        <button class='ccalc-minus'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path d="M4.5 8H12.5" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <input type='text' value='1'>
+                                        <button class='ccalc-plus'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path d="M8.5 4V12" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.5 8H12.5" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="order-item__col2">
+                                <div class="order-item__price">
+                                    <div class="h5">
+                                        60 руб
+                                    </div>
+                                </div>
+                                <button class="order-item__remove">
+                                    <img src="img/close2.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="order-suggest">
+                        <div class="h5 pink-text">
+                            Закажи еще 1 набор и получи <br>набор аромасаше из 8 шт в подарок
+                        </div>
+                        <div class="order-products">
+                            <div class="products-slider slider">
+                                <div class="slider__wrap">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="product-card2">
+                                                    <div class="product-card2__top">
+                                                        <div class="product-card2__img">
+                                                            <img src="img/product-img4.webp" alt="">
+                                                        </div>
+                                                        <button class="_js-cart-btn product-card2__btn"></button>
+                                                    </div>
+                                                    <a href="" class="text14">
+                                                        Табак-ваниль
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-card2">
+                                                    <div class="product-card2__top">
+                                                        <div class="product-card2__img">
+                                                            <img src="img/product-img2.webp" alt="">
+                                                        </div>
+                                                        <button class="_js-cart-btn product-card2__btn"></button>
+                                                    </div>
+                                                    <a href="" class="text14">
+                                                        Пион
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-card2">
+                                                    <div class="product-card2__top">
+                                                        <div class="product-card2__img">
+                                                            <img src="img/product-img3.webp" alt="">
+                                                        </div>
+                                                        <button class="_js-cart-btn product-card2__btn"></button>
+                                                    </div>
+                                                    <a href="" class="text14">
+                                                        Хлопок
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-card2">
+                                                    <div class="product-card2__top">
+                                                        <div class="product-card2__img">
+                                                            <img src="img/product-img5.webp" alt="">
+                                                        </div>
+                                                        <button class="_js-cart-btn product-card2__btn"></button>
+                                                    </div>
+                                                    <a href="" class="text14">
+                                                        Мандарин
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-card2">
+                                                    <div class="product-card2__top">
+                                                        <div class="product-card2__img">
+                                                            <img src="img/product-img6.webp" alt="">
+                                                        </div>
+                                                        <button class="_js-cart-btn product-card2__btn"></button>
+                                                    </div>
+                                                    <a href="" class="text14">
+                                                        Лаванда
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-card2">
+                                                    <div class="product-card2__top">
+                                                        <div class="product-card2__img">
+                                                            <img src="img/product-img.webp" alt="">
+                                                        </div>
+                                                        <button class="_js-cart-btn product-card2__btn"></button>
+                                                    </div>
+                                                    <a href="" class="text14">
+                                                        Манго
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fg">
+                            <select disabled>
+                                <option selected hidden disabled>
+                                    Выберите подарок
+                                </option>
+                                <option>Лаванда</option>
+                                <option>Манго</option>
+                                <option>Мандарин</option>
+                                <option>Пион</option>
+                                <option>Табак-ваниль</option>
+                                <option>Хлопок</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="order-sum">
+                    <div class="order-sum__price h4 green-text">
+                        Итого: 120 руб
+                    </div>
+                    <div class="order-sum__nav">
+                        <button class="order-sum__btn m-btn m-btn-pink-outline">
+                            <span>Продолжить покупки</span>
+                        </button>
+                        <button class="order-sum__btn m-btn m-btn-pink">
+                            <span>Оформить заказ</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="close-btn _close-modal">
+                <img src="img/close.svg" alt="">
+            </button>
+        </div>
+    </div>
+
+    <div class="modal order-modal" id="orderModal4">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <div class="order-modal__inner">
+                <div class="order-step">
+                    <div class="h4">
+                        Ваш заказ
+                    </div>
+                    <div class="order-step__items">
+                        <div class="order-item">
+                            <div class="order-item__col">
+                                <div class="order-item__img">
+                                    <img src="img/product-img.webp" alt="">
+                                </div>
+                                <div class="order-item__text">
+                                    <div class="h5">
+                                        Манго
+                                    </div>
+                                </div>
+                                <div class="order-item__count">
+                                    <div class='cartcalc'>
+                                        <button class='ccalc-minus'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path d="M4.5 8H12.5" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <input type='text' value='1'>
+                                        <button class='ccalc-plus'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path d="M8.5 4V12" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.5 8H12.5" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="order-item__col2">
+                                <div class="order-item__price">
+                                    <div class="h5">
+                                        60 руб
+                                    </div>
+                                </div>
+                                <button class="order-item__remove">
+                                    <img src="img/close2.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="order-item">
+                            <div class="order-item__col">
+                                <div class="order-item__img">
+                                    <img src="img/product-img.webp" alt="">
+                                </div>
+                                <div class="order-item__text">
+                                    <div class="h5">
+                                        Манго
+                                    </div>
+                                </div>
+                                <div class="order-item__count">
+                                    <div class='cartcalc'>
+                                        <button class='ccalc-minus'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path d="M4.5 8H12.5" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <input type='text' value='1'>
+                                        <button class='ccalc-plus'>
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                                <path d="M8.5 4V12" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M4.5 8H12.5" stroke="#3C2008" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="order-item__col2">
+                                <div class="order-item__price">
+                                    <div class="h5">
+                                        60 руб
+                                    </div>
+                                </div>
+                                <button class="order-item__remove">
+                                    <img src="img/close2.svg" alt="">
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="order-suggest">
+                        <div class="order-products">
+                            <div class="products-slider slider">
+                                <div class="slider__wrap">
+                                    <div class="swiper-container">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <div class="product-card2">
+                                                    <div class="product-card2__top">
+                                                        <div class="product-card2__img">
+                                                            <img src="img/product-img4.webp" alt="">
+                                                        </div>
+                                                        <button class="_js-cart-btn product-card2__btn"></button>
+                                                    </div>
+                                                    <a href="" class="text14">
+                                                        Табак-ваниль
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-card2">
+                                                    <div class="product-card2__top">
+                                                        <div class="product-card2__img">
+                                                            <img src="img/product-img2.webp" alt="">
+                                                        </div>
+                                                        <button class="_js-cart-btn product-card2__btn"></button>
+                                                    </div>
+                                                    <a href="" class="text14">
+                                                        Пион
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-card2">
+                                                    <div class="product-card2__top">
+                                                        <div class="product-card2__img">
+                                                            <img src="img/product-img3.webp" alt="">
+                                                        </div>
+                                                        <button class="_js-cart-btn product-card2__btn"></button>
+                                                    </div>
+                                                    <a href="" class="text14">
+                                                        Хлопок
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-card2">
+                                                    <div class="product-card2__top">
+                                                        <div class="product-card2__img">
+                                                            <img src="img/product-img5.webp" alt="">
+                                                        </div>
+                                                        <button class="_js-cart-btn product-card2__btn"></button>
+                                                    </div>
+                                                    <a href="" class="text14">
+                                                        Мандарин
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-card2">
+                                                    <div class="product-card2__top">
+                                                        <div class="product-card2__img">
+                                                            <img src="img/product-img6.webp" alt="">
+                                                        </div>
+                                                        <button class="_js-cart-btn product-card2__btn"></button>
+                                                    </div>
+                                                    <a href="" class="text14">
+                                                        Лаванда
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <div class="product-card2">
+                                                    <div class="product-card2__top">
+                                                        <div class="product-card2__img">
+                                                            <img src="img/product-img.webp" alt="">
+                                                        </div>
+                                                        <button class="_js-cart-btn product-card2__btn"></button>
+                                                    </div>
+                                                    <a href="" class="text14">
+                                                        Манго
+                                                    </a>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="fg">
+                            <select>
+                                <option selected hidden disabled>
+                                    Выберите подарок
+                                </option>
+                                <option>Лаванда</option>
+                                <option>Манго</option>
+                                <option>Мандарин</option>
+                                <option>Пион</option>
+                                <option>Табак-ваниль</option>
+                                <option>Хлопок</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="order-sum">
+                    <div class="order-sum__price h4 green-text">
+                        Итого: 120 руб
+                    </div>
+                    <div class="order-sum__nav">
+                        <button class="order-sum__btn m-btn m-btn-pink-outline">
+                            <span>Продолжить покупки</span>
+                        </button>
+                        <button class="order-sum__btn m-btn m-btn-pink">
+                            <span>Оформить заказ</span>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="close-btn _close-modal">
+                <img src="img/close.svg" alt="">
+            </button>
+        </div>
+    </div>
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
+    <script src="js/fancybox.umd.js"></script>
+    <script src="js/swiper-bundle.min.js"></script>
+    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="js/main.min.js"></script>
+
+</body>
+
+</html>
