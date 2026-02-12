@@ -12,86 +12,321 @@
     <link rel="stylesheet" href="css/nice-select.css">
     <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-    <title>Главная</title>
+    <title>Контакты</title>
 </head>
 
 
-
-<style>
-    .wrapper a {
-        font-size: 30px;
-        text-transform: capitalize;
-    }
-
-    .wrapper button {
-        margin-bottom: 25px;
-        width: 300px;
-        height: 45px;
-    }
-</style>
-
 <body class="m-page">
+    <div class="wrapper">
+        <header class="header">
+            <div class="header-banner">
+                <img src="img/main-banner.webp" alt="" class="_view1">
+                <img src="img/main-banner2.webp" alt="" class="_view2">
+            </div>
 
-    <div class="wrapper" style="padding: 50px;">
-        <a href="index.html" style="display: block; margin-bottom: 20px;">
-            Главная
-        </a>
-        <a href="catalog.html" style="display: block; margin-bottom: 20px;">
-            Каталог
-        </a>
-        <a href="catalog-item.html" style="display: block; margin-bottom: 20px;">
-            Карточка товара
-        </a>
-        <a href="order.html" style="display: block; margin-bottom: 20px;">
-            Оформление заказа
-        </a>
-        <a href="order2.html" style="display: block; margin-bottom: 20px;">
-            Оформление заказа 2
-        </a>
-        <a href="order3.html" style="display: block; margin-bottom: 20px;">
-            Оформление заказа 3
-        </a>
-        <a href="order4.html" style="display: block; margin-bottom: 20px;">
-            Оформление заказа 4
-        </a>
-        <a href="delivery.html" style="display: block; margin-bottom: 20px;">
-            Доставка и оплата
-        </a>
-        <a href="contacts.html" style="display: block; margin-bottom: 20px;">
-            Контакты
-        </a>
+            <div class="header-top">
+                <div class="container">
+                    <div class="header-top__inner _flex-between">
+                        <a href="" class="header__logo">
+                            <img src="img/logo2.svg" alt="">
+                        </a>
 
+                        <div class="header-contacts">
+                            <div class="header-contacts__show">
+                                <img src="img/arrow-bottom.svg" alt="">
+                            </div>
+                            <div class="header-contacts__hidden">
+                                <div class="header-contacts__info pink-text">
+                                    <div class="h5">Доставка по всей РБ</div>
+                                    <div class="h5">Онлайн-заказ: 24/7</div>
+                                </div>
+                                <div class="header-contacts__links">
+                                    <a href="tel:+375 (33) 627-95-29" class="header-contacts__link text18 semi-bold-text h4-mob">
+                                        +375 (33) 627-95-29
+                                    </a>
+                                    <a href="mailto:longoria.aroma@gmail.com" class="header-contacts__link text18 semi-bold-text h4-mob">
+                                        longoria.aroma@gmail.com
+                                    </a>
+                                </div>
+                                <div class="socials">
+                                    <a href="" class="socials__item">
+                                        <img src="img/ig2.svg" alt="">
+                                    </a>
+                                    <a href="" class="socials__item">
+                                        <img src="img/tt2.svg" alt="">
+                                    </a>
+                                    <a href="" class="socials__item">
+                                        <img src="img/youtube2.svg" alt="">
+                                    </a>
+                                </div>
 
+                            </div>
+                        </div>
+                        <button class="burger _toggle-menu">
+                            <img src="img/burger.svg" alt="">
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom">
+                <div class="container">
+                    <div class="header-bottom__inner _flex">
+                        <div class="header-catalog">
+                            <div class="header-catalog__show">
+                                <img src="img/icon-catalog.svg" alt="">
+                                <span>Каталог </span>
+                            </div>
+                            <div class="header-catalog__hidden">
+                                <div class="header-catalog__links">
+                                    <a href="" class="header-catalog__link">
+                                        <span class="text18 text16-tablet">Подарочные наборы</span>
+                                    </a>
+                                    <a href="" class="header-catalog__link">
+                                        <span class="text18 text16-tablet">Аромадиффузоры</span>
+                                    </a>
+                                    <a href="" class="header-catalog__link">
+                                        <span class="text18 text16-tablet">Саше</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
 
+                        <div class="menu">
+                            <button class="menu__close _toggle-menu">
+                                <img src="img/close.svg" alt="">
+                            </button>
+                            <nav class="nav">
+                                <ul>
+                                    <li><a href="">О компании</a></li>
+                                    <li><a href="">Дилерам</a></li>
+                                    <li><a href="">Доставка и оплата</a></li>
+                                    <li><a href="">Контакты</a></li>
+                                </ul>
+                            </nav>
+                            <div class="header-gift">
+                                <img src="img/gift.webp" alt="">
+                                <span class="h5 text16-tablet pink-text">
+                        Корпоративные <br> подарки
+                    </span>
+                            </div>
+                        </div>
 
-        <button data-modal="giftModal" style="border: 2px solid #000;margin-bottom: 20px;">
-            Идеальный подарок
-        </button>
-        <button data-modal="orderModal" style="border: 2px solid #000;margin-bottom: 20px;">
-            Оформление заказа
-        </button>
-        <button data-modal="orderModal2" style="border: 2px solid #000;margin-bottom: 20px;">
-            Оформление заказа 2
-        </button>
-        <button data-modal="orderModal3" style="border: 2px solid #000;margin-bottom: 20px;">
-            Оформление заказа 3
-        </button>
-        <button data-modal="orderModal4" style="border: 2px solid #000;margin-bottom: 20px;">
-            Оформление заказа 4
-        </button>
-        <button data-modal="successModal" style="border: 2px solid #000;margin-bottom: 20px;">
-            Оплата успешно совершена
-        </button>
+                        <div class="header-action">
+                            <button class="header-action__btn">
+                                <img src="img/favourite3.svg" alt="">
+                                <span class="header-action__btn-title">
+                        Избранное
+                    </span>
+                                <span class="pin">3</span>
+                            </button>
+                            <button class="header-action__btn">
+                                <img src="img/cart2.svg" alt="">
+                                <span class="header-action__btn-title">
+                        Корзина
+                    </span>
+                                <span class="pin">2</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+        </header>
+        <main class="content">
+            <div class="contacts m-section _first">
+                <div class="container">
+                    <div class="breadcrumbs">
+                        <ul>
+                            <li><a href="">Главная</a></li>
+                            <li><span>Контакты</span></li>
+                        </ul>
+                    </div>
+                    <h1 class="h2">
+                        Контакты
+                    </h1>
+                    <div class="contacts__grid">
+                        <div class="contacts__col">
+                            <h2 class="h3">
+                                Наши реквизиты
+                            </h2>
+                            <div class="contacts__items">
+                                <div class="contacts__item">
+                                    <div class="contacts__item-text text18 text16-tablet">
+                                        ООО «ЛАМУР ГРУПП»
+                                    </div>
+                                    <div class="contacts__item-text text18 text16-tablet">
+                                        УНП 193915941
+                                    </div>
+                                </div>
+                                <div class="contacts__item">
+                                    <div class="contacts__item-text text18 text16-tablet">
+                                        Валюта BYN
+                                    </div>
+                                    <div class="contacts__item-text text14 text16-tablet">
+                                        Р/С BY79ALFA30122H77920010270000
+                                    </div>
+                                    <div class="contacts__item-text text18 text16-tablet">
+                                        ЗАО «Альфа-Банк»
+                                    </div>
+                                    <div class="contacts__item-text text18 text16-tablet">
+                                        БИК ALFABY2X
+                                    </div>
+                                </div>
+                                <div class="contacts__item">
+                                    <div class="contacts__item-text text18 text16-tablet">
+                                        Юридический адрес Альфа банка:  <br> ул. Сурганова, 43-47, 220013 г. Минск, Республика Беларусь
+                                    </div>
+                                </div>
+                                <div class="contacts__item">
+                                    <div class="contacts__item-text text18 text16-tablet">
+                                        ЮР АДРЕС: Республика Беларусь, 220040, <br> г.Минск. ул. Восточная д.39, пом.2Н, ком 5\7
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="contacts__col2">
+                            <div class="sell-department">
+                                <h2 class="h2">
+                                    Отдел продаж
+                                </h2>
+                                <div class="sell-department__links">
+                                    <a href="tel:+375 (33) 627-95-29" class="sell-department__link h4 medium-text">
+                                        +375 (33) 627-95-29
+                                    </a>
+                                    <a href="mailto:longoria.aroma@gmail.com" class="sell-department__link h4 medium-text">
+                                        longoria.aroma@gmail.com
+                                    </a>
+                                </div>
+                                <div class="sell-department__bottom">
+                                    <div class="sell-department__subtitle">
+                                        Заказы на сайте через корзину – круглосуточно
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <form action="" class="contacts-form review-form">
+                        <h3 class="h3">
+                            Остались вопросы?
+                        </h3>
+                        <div class="review-form__fields">
+                            <div class="fg fg-dynamic">
+                                <input type="text">
+                                <label>Имя</label>
+                            </div>
+                            <div class="fg fg-dynamic">
+                                <input type="text">
+                                <label>Email</label>
+                            </div>
+                            <div class="fg fg-dynamic _full">
+                                <textarea></textarea>
+                                <label>Отзыв</label>
+                            </div>
+                        </div>
+                        <button class="review-form__btn m-btn m-btn-pink">
+                            <span>Отправить</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__top">
+                    <div class="footer__top-col">
+                        <a href="" class="footer__logo">
+                            <img src="img/logo.svg" alt="">
+                        </a>
+                        <div class="footer-info medium-text">
+                            <div class="text16 text14-tablet">
+                                ООО «ЛАМУР ГРУПП»
+                            </div>
+                            <div class="text16 text14-tablet">
+                                УНП 193915941
+                            </div>
+                            <div class="text16 text14-tablet">
+                                ЮР АДРЕС: Республика Беларусь, 220040, г.Минск. <span class="_no-wrap">ул. Восточная д.39</span> пом.2Н ком5\7
+                            </div>
+                        </div>
+                        <div class="footer-info2">
+                            <div class="text14">
+                                Св-во о регистрации № 193915941, выдано Минским горисполкомом 08.10.2025.
+                            </div>
+                            <div class="text14">
+                                Регистрация интернет-магазина в торговом реестре Республики Беларусь №510973 от 27.05.2021
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__top-col2">
+                        <div class="footer-wrap">
+                            <div class="footer-nav">
+                                <ul>
+                                    <li><a href="">Каталог</a></li>
+                                    <li><a href="">О компании</a></li>
+                                    <li><a href="">Дилерам</a></li>
+                                    <li><a href="">Доставка и оплата</a></li>
+                                    <li><a href="">Возврат товара</a></li>
+                                    <li><a href="">Контакты</a></li>
+                                </ul>
+                            </div>
+                            <div class="footer-contacts">
+                                <div class="footer-contacts__items medium-text">
+                                    <div class="text20 text18-tablet">
+                                        <a href="tel:+375336279529">
+                                            +375 (33) 627-95-29
+                                        </a>
+                                    </div>
+                                    <div class="text20 text18-tablet">
+                                        <a href="mailto:longoria.aroma@gmail.com">
+                                            longoria.aroma@gmail.com
+                                        </a>
+                                    </div>
+                                    <div class="text20 text18-tablet pink-text">
+                                        Online-заказы 24/7
+                                    </div>
+                                </div>
+                                <div class="socials">
+                                    <a href="" class="socials__item">
+                                        <img src="img/ig.svg" alt="">
+                                    </a>
+                                    <a href="" class="socials__item">
+                                        <img src="img/tt.svg" alt="">
+                                    </a>
+                                    <a href="" class="socials__item">
+                                        <img src="img/youtube.svg" alt="">
+                                    </a>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="footer-consult">
+                            <div class="footer-consult__content">
+                                <div class="h3 h4-mob">
+                                    Остались вопросы?
+                                </div>
+                                <div class="text18 text16-tablet medium-text">
+                                    Руководитель на них ответит
+                                </div>
+                            </div>
+                            <button class="footer-consult__btn m-btn m-btn-pink">
+                                <span>Связаться с руководителем</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <a href="" class="footer__link text14 text12-tablet">Правила оказания услуг</a>
+                    <a href="" class="footer__link text14 text12-tablet">Карта сайта</a>
+                    <a href="" class="footer__link text14 text12-tablet">Политика конфиденциальности</a>
+                    <a href="" class="footer__link text14 text12-tablet">Настройка файлов cookie</a>
+                </div>
+            </div>
+
+        </footer>
     </div>
 
-
-
-
-
-
-
-    <!--  -->
     <div class="modal review-modal" id="reviewModal">
         <div class="modal__bg modal-bg _close-modal"></div>
         <div class="modal__dialog">
